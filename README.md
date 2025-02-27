@@ -6,10 +6,11 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 # dependencies
 
 ```bash 
-nvim v0.10.4 +
-nodejs
-fzf
-xsel
+sudo apt install nvim (v0.10.4 +)
+sudo apt install nodejs fzf xsel
+curl -LO https://github.com/BurntSushi/ripgrep/releases/download/14.1.0/ripgrep_14.1.0-1_amd64.deb
+sudo dpkg -i ripgrep_14.1.0-1_amd64.deb
+```
 ```
 ```
 ```
