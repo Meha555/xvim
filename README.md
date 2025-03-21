@@ -1,9 +1,9 @@
-# 💤 LazyVim
+# xvim
+nvim 的一个私人配置
 
-A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
-Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
+![](doc/nvim.png)
 
-# dependencies
+## dependencies
 
 ```bash 
 sudo apt install nvim (v0.10.4 +)

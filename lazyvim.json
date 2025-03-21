@@ -6,7 +6,6 @@
     "lazyvim.plugins.extras.editor.fzf",
     "lazyvim.plugins.extras.editor.neo-tree",
     "lazyvim.plugins.extras.lang.clangd",
-    "lazyvim.plugins.extras.lang.cmake",
     "lazyvim.plugins.extras.lang.toml",
     "lazyvim.plugins.extras.util.gitui"
   ],
