@@ -32,7 +32,7 @@ require("lazy").setup({
   },
   install = { colorscheme = { "tokyonight", "habamax" } },
   checker = {
-    enabled = true, -- check for plugin updates periodically
+    enabled = false, -- check for plugin updates periodically
     notify = false, -- notify on update
   }, -- automatically check for plugin updates
   performance = {
@@ -49,5 +49,10 @@ require("lazy").setup({
         "zipPlugin",
       },
     },
+  },
+  -- 禁用luarocks，我安装后lazyvim没有识别到它，原因未知
+  rocks = {
+    enabled = false,
+    hererocks = false,
   },
 })

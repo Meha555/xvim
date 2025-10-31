@@ -38,7 +38,7 @@ return {
         ╚██╗ ██╔╝██║██║╚██╔╝██║ z         
          ╚████╔╝ ██║██║ ╚═╝ ██║           
           ╚═══╝  ╚═╝╚═╝     ╚═╝           
-           佛祖保佑，永无bug              
+用我们的决心、信心和毅力来培植我们的生命之花🍀
  ]],
         -- stylua: ignore
         ---@type snacks.dashboard.Item[]
@@ -47,8 +47,8 @@ return {
           { icon = " ", key = "n", desc = "新建文件", action = ":ene | startinsert" },
           { icon = " ", key = "g", desc = "查找文本", action = ":lua Snacks.dashboard.pick('live_grep')" },
           { icon = " ", key = "r", desc = "最近文件", action = ":lua Snacks.dashboard.pick('oldfiles')" },
-          { icon = " ", key = "c", desc = "插件配置", action = ":lua Snacks.dashboard.pick('files', {cwd = vim.fn.stdpath('config')})" },
           { icon = " ", key = "s", desc = "恢复会话", section = "session" },
+          { icon = " ", key = "c", desc = "插件配置", action = ":lua Snacks.dashboard.pick('files', {cwd = vim.fn.stdpath('config')})" },
           { icon = " ", key = "x", desc = "插件扩展", action = ":LazyExtras" },
           { icon = "󰒲 ", key = "l", desc = "Lazy", action = ":Lazy" },
           { icon = " ", key = "q", desc = "退出", action = ":qa" },
