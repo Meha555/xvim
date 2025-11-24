@@ -1,6 +1,7 @@
 return {
 {
   "zbirenbaum/copilot.lua",
+  enabled = false, -- 不想用AI
   cmd = "Copilot",
   build = ":Copilot auth",
   event = "BufReadPost",
