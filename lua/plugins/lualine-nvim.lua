@@ -96,6 +96,24 @@ return {
             { "encoding", separator = "⎹" },
             { "fileformat", separator = "⎹" },
             { "filetype" },
+            {
+              function()
+                if not vim.g.loaded_xmake then
+                  return ""
+                end
+                local Info = require("xmake.info")
+                if Info.mode.current == "" then
+                  return ""
+                end
+                if Info.target.current == "" then
+                  return "Xmake: Not Select Target"
+                end
+                return ("%s(%s)"):format(Info.target.current, Info.mode.current)
+              end,
+              cond = function()
+                return vim.o.columns > 100
+              end,
+            },
           },
           lualine_z = {
             function()
