@@ -3,24 +3,41 @@ return {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
+        -- 参考：https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md
         -- Ensure mason installs the server
         clangd = {
           keys = {
             { "<leader>ch", "<cmd>ClangdSwitchSourceHeader<cr>", desc = "Switch Source/Header (C/C++)" },
           },
-          root_dir = function(fname)
-            return require("lspconfig.util").root_pattern(
-              "Makefile",
-              "configure.ac",
-              "configure.in",
-              "config.h.in",
-              "meson.build",
-              "meson_options.txt",
-              "build.ninja"
-            )(fname) or require("lspconfig.util").root_pattern("compile_commands.json", "compile_flags.txt")(
-              fname
-            ) or require("lspconfig.util").find_git_ancestor(fname)
-          end,
+        -- 新版 mvim-lspconfig 自带 root_markers 来标识项目根目录，无需手动指定
+          root_markers = {
+            '.clangd',
+            '.clang-tidy',
+            '.clang-format',
+            'compile_commands.json',
+            'compile_flags.txt',
+            'configure.ac', -- AutoTools
+            'configure.in',
+            'config.h.in',
+            'build.ninja',
+            'meson.build',
+            'meson_options.txt',
+            '.git',
+        },
+        --   root_dir = function(fname)
+        --     return require("lspconfig.util").root_pattern(
+        --       "Makefile",
+        --       "configure.ac",
+        --       "configure.in",
+        --       "config.h.in",
+        --       "meson.build",
+        --       "meson_options.txt",
+        --       "build.ninja"
+        --     )(fname) or require("lspconfig.util").root_pattern("compile_commands.json", "compile_flags.txt")(
+        --       fname
+        --     ) or require("lspconfig.util").find_git_ancestor(fname)
+        --   end,
+        --   root_dir = return require("lspconfig.util").root_pattern("compile_commands.json", "compile_flags.txt", "configure.ac", ".git")(...),
           capabilities = {
             offsetEncoding = { "utf-16" },
           },
