@@ -20,9 +20,9 @@ return {
       --   lsp_fallback = true, -- Fallback to LSP if formatter fails
       -- },
       formatters = {
-        --clang-format = {
-        -- prepend_args = {"-style=google"},
-        --},
+        clang_format = {
+          prepend_args = { "-style=WebKit" },
+        },
       },
     },
   },
