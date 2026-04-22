@@ -116,9 +116,14 @@ return {
             },
           },
           lualine_z = {
-            function()
-              return " " .. os.date("%R")
-            end,
+            {
+              function()
+                return " " .. os.date("%R")
+              end,
+            },
+            {
+              require("opencode").statusline, -- for opencode
+            },
           },
         },
         extensions = { "neo-tree", "lazy", "fzf" },
