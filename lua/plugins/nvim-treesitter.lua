@@ -51,6 +51,8 @@ return {
         "vimdoc",
         "xml",
         "yaml",
+        "cmake",
+        "gn",
       },
       sync_install = false,
       auto_install = true,
